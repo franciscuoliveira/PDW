@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
 Vamos começar pelo figma
-=======
 https://www.figma.com/file/uozfMpTHzVHsf7FWdd55sj/PDW?node-id=0%3A1
->>>>>>> Stashed changes
+
