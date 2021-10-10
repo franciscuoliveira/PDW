@@ -1,0 +1,202 @@
+/* Color scheme:
+ *  white for text
+ *  cleaner white for default background
+ *  black for text
+ *  orange for backgrounds
+ *  dark orange for accents
+ */
+:root {
+    --mwhite: #ddd;
+    --mbackground: #f8f9fa;
+    --mblack: #181818;
+    --mdarkorange: #DA512B;
+    --morange: #E87631;
+    --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+* {
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: var(--bs-font-sans-serif);
+    scroll-behavior: smooth;
+
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+html, body {
+    overflow-x: hidden;
+    background-color: #2D2E2E;
+    width: 100vw;
+}
+
+::selection {
+    background: var(--morange);
+    text-shadow: none;
+  }
+
+/* Navigation bar with logo and menu items*/
+nav {
+    display: flex;
+    /*justify-content: space-around;*/
+    /* test */
+    justify-content: space-between;
+    margin-left: 8%;
+    margin-right: 6%;
+    /* end test */
+    align-items: center;
+    min-height: 15vh;
+    z-index: 99;
+}
+
+#logo {
+    max-width: 7vw;
+    height: auto;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 55%;
+    z-index: 99;
+    
+}
+
+.nav-links li {
+    list-style: none;
+}
+ 
+.nav-links a {
+    color: #F2F3F4;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: var(--mdarkorange);
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+nav h4 {
+    color: #F2F3F4;
+    font-size: 1.6em;
+}
+
+
+
+@media screen and (max-width: 1024px) {
+    .nav-links {
+        display: flex;
+        justify-content: space-around;
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        height: 85vh;
+        top: 15vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+    .nav-links li {
+        opacity: 0;
+    }
+    .burger {
+        display: block;
+    }
+}
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px,-6px);
+}
+
+/* End Navigation Bar*/
+
+
+@media screen and (max-width:960px) {
+    .footer-container {
+        max-width: 600px;
+    }
+
+    .right-col {
+        width: 100%;
+    }
+
+    .footer-container .right-col {
+        margin-bottom: 60px;
+    }
+
+    .left-col {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .footer-btn {
+        margin: 0;
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
+
+
+
+
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.dot_index{
+	font-size: 2vw;
+}
+
