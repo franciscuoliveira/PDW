@@ -179,22 +179,15 @@ nav h4 {
 /* Footer with newsletter form and social media links */
 
 footer {
-    background-color: #DAA520;
+    background-color: #476351;
     padding: 90px 0;
+    text-align: center;
 }
 
 
 
 
-.footer-container {
-    max-width: 1300px;
-    margin: auto;
-    padding: 0 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap-reverse;
-}
+
 
 .footer-logo {
     width: 180px;
@@ -550,4 +543,47 @@ footer {
 
 .logo h4 {
     font-weight: 600;
+}
+
+/* flex box index*/
+* {
+  box-sizing: border-box;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  font-size: 30px;
+  text-align: center;
+}
+
+.flex-item-left {
+  background-color: #f1f1f1;
+  padding: 10px;
+  flex: 50%;
+}
+
+.flex-item-right {
+  background-color: dodgerblue;
+  padding: 10px;
+  flex: 50%;
+}
+#perfil_right{
+  width: 40%;
+}
+#perfil_left{
+  width: 40%;
+}
+
+/* Responsive layout - makes a one column-layout instead of two-column layout */
+@media (max-width: 800px) {
+  .flex-container {
+    flex-direction: column;
+  }
+}
+
+/*end of flexbox index*/
+/*footer*/
+#logo_footer{
+  text-align: center;
 }
