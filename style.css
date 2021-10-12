@@ -59,7 +59,7 @@ nav {
     justify-content: space-around;
     width: 55%;
     z-index: 99;
-    background-color: #2D2E2E;
+    background-color: var(--mbackground);
 }
 
 .nav-links li {
