@@ -7,12 +7,13 @@
  */
 :root {
     --mwhite: #F2F3F4;
-    --mbackground: #403D50;
-    --mblack: #403D50;
+    --mbackground: #2D2E2E;
+    --mblack: #2D2E2E;
     --mgold: #DAA520;
     --mgreen: #476351;
-    --bs-font-sans-serif: system-ui, -apple-system, "Spartan", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --bs-font-sans-serif: "Rubik", system-ui, -apple-system, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --logofont: "Spartan";
 }
 
 * {
@@ -21,7 +22,6 @@
     box-sizing: border-box;
     font-family: var(--bs-font-sans-serif);
     scroll-behavior: smooth;
-
 }
 
 
@@ -34,7 +34,7 @@ html, body {
 
 
 ::selection {
-    background: --background;
+    background: var(--mgold);
     text-shadow: none;
   }
 
@@ -70,7 +70,7 @@ nav {
 }
  
 .nav-links a {
-    color: #F2F3F4;
+    color: var(--mwhite);
     text-decoration: none;
     letter-spacing: 2px;
     font-weight: bold;
@@ -90,12 +90,13 @@ nav {
     transition: all 0.3s ease;
 }
 
+/*logo*/
 nav h4 {
     max-width: 15vw;
     height: auto;
     color: var(--mwhite);
     font-size: 1.8em;
-    font-family: var(--bs-font-sans-serif);
+    font-family: var(--logofont);
     font-weight: bold;
 }
 .dot_index{
@@ -171,9 +172,11 @@ footer {
 
 
 .footer-logo {
+    color: var(--mwhite);
+    align: center;
     width: 180px;
-    margin-bottom: 5vh;
-    font-family: 'Spartan';
+    margin-bottom: 4vh;
+    font-family: var(--logofont);
     font-weight: bolder;
 }
 
@@ -182,7 +185,7 @@ footer {
 }
 
 .social-media a {
-    color: #001e21;
+    color: var(--mgreen);
     margin-right: 25px;
     font-size: 22px;
     text-decoration: none;
@@ -367,7 +370,7 @@ footer {
 
 
 #gold{
-    color: #DAA520;
+    color: var(--mgold);
 }
 
 .columnabout {
