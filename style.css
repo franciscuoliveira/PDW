@@ -6,11 +6,11 @@
  *  dark orange for accents
  */
 :root {
-    --mwhite: #ddd;
-    --mbackground: #f8f9fa;
-    --mblack: #181818;
-    --mdarkorange: #DA512B;
-    --morange: #E87631;
+    --mwhite: #F2F3F4;
+    --mbackground: #403D50;
+    --mblack: #403D50;
+    --mgold: #DAA520;
+    --mgreen: #476351;
     --bs-font-sans-serif: system-ui, -apple-system, "Spartan", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
@@ -24,33 +24,17 @@
 
 }
 
-a {
-    text-decoration: none;
-    color: black;
-}
+
 
 html, body {
     overflow-x: hidden;
-    background-color: #2D2E2E;
+    background-color: var(--mbackground);
     width: 100vw;
 }
 
 
-.flex-container-news {
-    display: flex;
-    background-color: #DAA520;
-    flex-wrap: wrap;
-}
-
-.flex-container-news > div {
-    align-items: center;
-    margin: 10px;
-    padding: 60px;
-    font-size: 3;
-}
-
 ::selection {
-    background: #DAA520;
+    background: --background;
     text-shadow: none;
   }
 
@@ -68,10 +52,7 @@ nav {
     z-index: 99;
 }
 
-#logo {
-    max-width: 7vw;
-    height: auto;
-}
+
 
 .nav-links {
     display: flex;
@@ -104,14 +85,18 @@ nav {
 .burger div {
     width: 25px;
     height: 3px;
-    background-color: #DAA520;
+    background-color: var(--mgold);
     margin: 5px;
     transition: all 0.3s ease;
 }
 
 nav h4 {
-    color: #F2F3F4;
-    font-size: 1.6em;
+    max-width: 15vw;
+    height: auto;
+    color: var(--mwhite);
+    font-size: 1.8em;
+    font-family: var(--bs-font-sans-serif);
+    font-weight: bold;
 }
 .dot_index{
     font-size: 35px;
@@ -179,19 +164,17 @@ nav h4 {
 /* Footer with newsletter form and social media links */
 
 footer {
-    background-color: #476351;
+    background-color: var(--mgreen);
     padding: 90px 0;
     text-align: center;
 }
 
 
-
-
-
-
 .footer-logo {
     width: 180px;
     margin-bottom: 5vh;
+    font-family: 'Spartan';
+    font-weight: bolder;
 }
 
 .social-media {
