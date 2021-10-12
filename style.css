@@ -1,10 +1,3 @@
-/* Color scheme:
- *  white for text
- *  cleaner white for default background
- *  black for text
- *  orange for backgrounds
- *  dark orange for accents
- */
 :root {
     --mwhite: #F2F3F4;
     --mbackground: #2D2E2E;
@@ -14,6 +7,7 @@
     --bs-font-sans-serif: "Rubik", system-ui, -apple-system, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     --logofont: "Spartan";
+    --fontletra: "Rubik;"
 }
 
 * {
@@ -23,7 +17,6 @@
     font-family: var(--bs-font-sans-serif);
     scroll-behavior: smooth;
 }
-
 
 
 html, body {
@@ -39,25 +32,26 @@ html, body {
   }
 
 /* Navigation bar with logo and menu items*/
+a:link{
+    text-decoration: none;
+}
 nav {
     display: flex;
     /*justify-content: space-around;*/
     /* test */
     justify-content: space-between;
-    margin-left: 8%;
-    margin-right: 6%;
+    margin-left: 12%;
+    margin-right: 10%;
     /* end test */
     align-items: center;
     min-height: 15vh;
     z-index: 99;
 }
 
-
-
 .nav-links {
     display: flex;
     justify-content: space-around;
-    width: 55%;
+    width: 50%;
     z-index: 99;
     background-color: var(--mbackground);
 }
@@ -73,8 +67,9 @@ nav {
     color: var(--mwhite);
     text-decoration: none;
     letter-spacing: 2px;
-    font-weight: bold;
-    font-size: 1em;
+    font-family: var(--bs-font-sans-serif);
+    font-weight: normal;
+    font-size: 1.1em;
 }
 
 .burger {
@@ -95,7 +90,7 @@ nav h4 {
     max-width: 15vw;
     height: auto;
     color: var(--mwhite);
-    font-size: 1.8em;
+    font-size: 1.6em;
     font-family: var(--logofont);
     font-weight: bold;
 }
@@ -162,75 +157,68 @@ nav h4 {
 }
 
 /* End Navigation Bar*/
+
+/* flex box do perfil*/
+* {
+    box-sizing: border-box;
+  }
+  
+  .flex-container {
+    display: flex;
+    flex-direction: row;
+    font-size: 30px;
+    text-align: center;
+  }
+  
+  .flex-item-left { 
+    padding: 10px;
+    flex: 50%;
+  }
+  
+  .flex-item-right {
+    padding: 10px;
+    flex: 50%;
+  }
+  #perfil_right{
+    width: 40%;
+  }
+  #perfil_left{
+    width: 40%;
+  }
+  
+  /* Responsive layout - makes a one column-layout instead of two-column layout */
+  @media (max-width: 800px) {
+    .flex-container {
+      flex-direction: column;
+    }
+  }
+  
+  /*end of flexbox index*/
+
 /* Footer with newsletter form and social media links */
 
-footer {
-    background-color: var(--mgreen);
+.footer {
+    background-color: var(--mgold);
     padding: 90px 0;
     text-align: center;
+    position: relative;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    
 }
 
 
 .footer-logo {
-    color: var(--mwhite);
-    align: center;
+    color: var(--mblack);
+    text-align: center;
     width: 180px;
     margin-bottom: 4vh;
     font-family: var(--logofont);
     font-weight: bolder;
 }
 
-.social-media {
-    margin: 20px 0;
-}
 
-.social-media a {
-    color: var(--mgreen);
-    margin-right: 25px;
-    font-size: 22px;
-    text-decoration: none;
-    transition: 0.3s linear;
-}
-
-.social-media a:hover {
-    color: var(--mwhite);
-}
-
-.right-col h1 {
-    font-size: 26px;
-}
-
-.right-col p {
-    margin-top: 2vh;
-    margin-bottom: 3vh;
-}
-
-.border {
-    width: 100px;
-    height: 4px;
-    background: var(--mwhite);
-}
-
-.newsletter-form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.txtb {
-    flex: 1;
-    padding: 18px 40px;
-    font-size: 16px;
-    color: #293043;
-    background: var(--mwhite);
-    border: none;
-    font-weight: 700;
-    outline: none;
-    border-radius: 30px;
-    min-width: 260px;
-    height: 50px;
-}
 
 .footer-btn {
     padding: 0px 40px;
@@ -278,90 +266,6 @@ footer {
     }
 }
 
-/* Collapside buy  */
-
-.collapsible-container {
-    width: 70%;
-    margin-bottom: 3rem;
-}
-.collapsible {
-  background-color: var(--morange);
-  color: var(--mwhite);
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 1rem;
-  font-weight: 700;
-  
-}
-
-.active, .collapsible:hover {
-  background-color: var(--mdarkorange);
-}
-
-.content-buy {
-    margin-top: 2rem;
-  padding: 0 18px;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-  text-align: left;
-}
-
-.collapsible:after {
-  content: '\02795'; /* Unicode character for "plus" sign (+) */
-  font-size: 18px;
-  color: red;
-  float: right;
-  margin-left: 5px;
-}
-
-.active:after {
-  content: "\2796"; /* Unicode character for "minus" sign (-) */
-}
-/* end of Collapside buy  */
-
-.container-about {
-  position: relative;
-  width: 96%;
-  max-width: 960px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-#title-about{
-    margin-top: 2%;
-    margin-bottom: 2%;
-    text-align: center;
-    color: #E87631;
-}
-
-#title-about2{
-    margin-top: 2%;
-    margin-bottom: 1%;
-    text-align: center;
-    color: #005255;
-}
-
-#p-about{
-    margin-left: 30%;
-    margin-right: 30%;
-    margin-bottom: 2%;
-    text-align: center;
-    
-}
-
-#img-index{
-    width: 70%;
-    margin-left: 15%;
-}
-
-
-
-
 
 
 *, *:before, *:after {
@@ -373,203 +277,15 @@ footer {
     color: var(--mgold);
 }
 
-.columnabout {
-  float: left;
-  width: 18%;
-  margin-bottom: 16px;
-  padding: 0 8px;
-
-}
-
-.cardabout {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  margin: 8px;
-}
-
-.container-chico {
-  padding: 0 16px;
-}
-
-.container-chico::after, .rowabout::after {
-  content: "";
-  clear: both;
-  display: table;
-
-}
-
 .title {
   color: grey;
 }
 
-.buttonabout {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 8px;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  margin-top: 5%;
-  margin-bottom: 5%;
-}
-
-#about-page .button:hover {
-  background-color: #555;
-}
-
-@media screen and (min-width: 650px) {
-  .rowabout {
-    margin-left: 10%;
-    display: block;
-  }
-}
-
-@media screen and (max-width: 650px) {
-  .columnabout {
-    width: 70%;
-    margin-left: 15%;
-    display: block;
-  }
-}
- 
- .about-section {
-    margin-top: 5rem;
-    width: 70%;
-    padding: 100px;
-    text-align: center;
-    color: var(--mblack);
-    border: 6px solid #005255;
-}
-
-.about-section h2 {
-    font-size: 2.5rem;
-    padding-bottom: 50px;
-}
-
-.about-section p {
-    font-size: 1.4rem;
-    font-weight: 350;
-}
-
-#home h5 {
-    font-size: 1.5em;
-}
-
-#buy-index {
-    margin-right: 3%;
-    color: #fff;
-    background-color: #DA512B;
-    border-radius: 30px;
-    padding: 15px 20px;
-}
-
-#buy-index:hover {
-    margin-right: 3%;
-    color: #fff;
-    background-color: #E87631;
-    border-radius: 30px;
-    padding: 15px 20px;
-}
-
-@media screen and (max-width:700px) {
-    .about-section {
-      border: none;
-      width: 80vw;
-      margin: 0;
-      padding-left: 0px;
-      padding-right: 0px;
-    }
-
-    .about-section p {
-        font-weight: 350;
-        font-size: 1.1em;
-    }
-}
-
-.text-center {
-    text-align: center;
-}
-
-.text-italics {
-    font-style: italic;
-}
-
-.text-bold {
-    font-weight: bold;
-}
-
-.doc-text {
-    margin-right: 5vw;
-    margin-left: 5vw;
-    line-height: 2.5em;
-}
-
-.doc-text ul {
-    margin-left: 3vw;
-}
-
-#circuit-img {
-    width: 80vw;
-}
-
-.under-development {
-    width: 80vw;
-}
 
 
-  
-.contact-form-container {
-    border-radius: 5px;
-    padding: 20px;
-    width: 70vw;
-    margin: 0 auto;
-} 
-
-.logo h4 {
-    font-weight: 600;
-}
-
-/* flex box index*/
-* {
-  box-sizing: border-box;
-}
-
-.flex-container {
-  display: flex;
-  flex-direction: row;
-  font-size: 30px;
-  text-align: center;
-}
-
-.flex-item-left {
-  background-color: #f1f1f1;
-  padding: 10px;
-  flex: 50%;
-}
-
-.flex-item-right {
-  background-color: dodgerblue;
-  padding: 10px;
-  flex: 50%;
-}
-#perfil_right{
-  width: 40%;
-}
-#perfil_left{
-  width: 40%;
-}
-
-/* Responsive layout - makes a one column-layout instead of two-column layout */
-@media (max-width: 800px) {
-  .flex-container {
-    flex-direction: column;
-  }
-}
-
-/*end of flexbox index*/
 /*footer*/
+/*
 #logo_footer{
   text-align: center;
 }
+/*
