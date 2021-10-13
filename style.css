@@ -200,7 +200,7 @@ nav h4 {
 .footer {
     background-color: var(--mgold);
     padding: 90px 0;
-    text-align: center;
+    
     position: relative;
     right: 0;
     left: 0;
@@ -282,10 +282,13 @@ nav h4 {
 }
 
 
-
-/*footer*/
-/*
-#logo_footer{
-  text-align: center;
+/*Orientation page
+*/
+.p-orient{
+    padding-top: 0.7%;
+    padding-bottom: 1%;
+    line-height: 1.6;
 }
-/*
+#h2-orient{
+    padding-bottom: 0.5%;
+}
