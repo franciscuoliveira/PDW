@@ -200,17 +200,20 @@ nav h4 {
 
 .footer {
     background-color: var(--mgold);
-    padding: 35px 0;
+    padding: 90px 0;
+    
     position: relative;
     right: 0;
     left: 0;
     bottom: 0;
+    
 }
 
 
 .footer-logo {
     color: var(--mblack);
-    padding-left: 45%;
+    text-align: center;
+    width: 180px;
     margin-bottom: 4vh;
     font-family: var(--logofont);
     font-weight: bolder;
@@ -280,23 +283,11 @@ nav h4 {
 }
 
 
-/*Publications page*/
-
-#h3-pubs{
- padding-top: 2%;
- padding-bottom: 0.5%;
-}
-
-.p-pubs{
-    padding-top: 0.7%;
-    padding-bottom: 2%;
-}
-
 /*Orientation page
 */
 .p-orient{
     padding-top: 0.7%;
-    padding-bottom: 2%;
+    padding-bottom: 1%;
     line-height: 1.6;
 }
 #h2-orient{
