@@ -3,7 +3,18 @@
 <head>
 	<title>Projects</title>
 	<link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/icon.png">
 	<meta charset="utf-8">
+    <script type="text/javascript">
+        function showContent(obj)
+            {
+            var inner = obj.parentNode.getElementsByTagName("div")[0];
+            if (inner.style.display == "none")
+                inner.style.display = "";
+            else
+                inner.style.display = "none";
+            }
+    </script>
 </head>
 <body>
 	<nav>
@@ -36,14 +47,42 @@
         </div>
     </nav>
     <script src="scriptmenu.js"></script>
-    <main>
+    <main class="index-main">
         <div class="flex-container-proj">
-            <div class="flex-item-left-proj"><img id="password" src="perfil.jpeg"> password</div>
-            <div class="flex-item-right-proj"><img id="perfil_right" src="perfil.jpeg"></div>
+            <div class="flex-item-left-proj">
+                <img id="projeto1" onClick="showContent(this)" src="img/password.jpg">
+                <div class="inner" style="display:none;">
+                    <h2 class="h2-proj">V2IP: Videomonitoramento para Identificação de Pessoas e Veículos ()</h2> 
+                    <h3 class="h3-proj">Duration:</h3> <hr>
+                    <p class="p-proj">4 Years</p>
+                    <h3 class="h3-proj">Scope</h3> <hr>
+                    <p class="p-proj">
+                        International project funded by Brazilian Ministry of Education through the <it>Coordenação de Aperfeiçoamento de Pessoal de Nivel Superior</it> (CAPES).
+                    </p>
+                    <h3 class="h3-proj"> Description</h3> <hr>
+                    <p class="p-proj"> Automated surveillance of video area5 of interest can help prevent crimes by recognizing potentially suspicious actions, as well as investigating by analyzing stored videos. Among the main problems faced by video surveillance are the large amount of data to be processed and its quality. This project focuses on the development of scalable and accurate solutions that can process large amounts of data and can be transmitted in low resolution videos, videos containing people and vehicles far from the camera. Among the applications to be investigated are the identification of people and recognition of license plates in low quality data.</p>
+                    <h3 class="h3-proj">Responsability</h3> <hr>
+                    <p class="p-proj">Participant </p>
+                </div>
+            </div>
+            <div class="flex-item-right-proj">
+                <img id="projeto2" onClick="showContent(this)" src="img/perfil.jpeg" >
+                <div class="inner" style="display:none;">
+                    <p>
+                        This project was made by blablabla
+                    </p>
+                </div>
+            </div>
           </div>
         
 
     </main>
 
 </body>
+<footer class="footer">
+    <div class="footer-logo">
+        Felipe Cascois.
+    </div>
+    
+</footer>
 </html>
