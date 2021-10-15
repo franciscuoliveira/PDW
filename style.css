@@ -295,8 +295,7 @@ nav h4 {
 
 .footer-logo {
     color: var(--mblack);
-    text-align: center;
-    width: 180px;
+    padding-left: 45%;
     margin-bottom: 4vh;
     font-family: var(--logofont);
     font-weight: bolder;
