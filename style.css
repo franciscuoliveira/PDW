@@ -4,10 +4,10 @@
     --mblack: #2D2E2E;
     --mgold: #DAA520;
     --mgreen: #476351;
-    --bs-font-sans-serif: "Rubik", system-ui, -apple-system, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --bs-font-sans-serif: "Ubuntu", system-ui, -apple-system, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     --logofont: "Spartan";
-    --fontletra: "Rubik;"
+    --fontletra: "Ubuntu;"
 }
 
 * {
@@ -196,6 +196,90 @@ nav h4 {
   
   /*end of flexbox index*/
 
+  .index-main{
+    padding-left: 12%; 
+    padding-right: 10%; 
+    color: var(--mwhite); 
+    padding-bottom: 5%;
+  }
+
+  hr{
+      background-color: var(--mgold);
+  }
+
+/*--------------------------------------------PROJECTS PAGE---------------------------------------------------*/
+ .flex-container-proj {
+    display: flex;
+    flex-direction: row;
+    font-size: 40px;
+    text-align: center;
+  }
+  
+  .flex-item-left-proj { 
+    padding: 10px;
+    flex: 60%;
+  }
+  
+  .flex-item-right-proj {
+    padding: 10px;
+    flex: 60%;
+  }
+  #projeto1{
+    width: 50%;
+  }
+  #projeto2{
+    width: 50%;
+  }
+  
+  
+  /* Responsive layout - makes a one column-layout instead of two-column layout */
+  @media (max-width: 800px) {
+    .flex-container-proj {
+        display: block;
+        flex-direction: column;
+    }
+    #projeto1{
+        width: 80%;
+      }
+    #projeto2{
+        width: 80%;
+      }
+  }
+
+.h2-proj{
+    text-align: left;
+    color: var(--mgold);
+    font-size: 2vw;
+    font-family: var(--bs-font-sans-serif);
+    font-weight: bold;
+}
+
+.p-proj{
+    text-align: left;
+    color: var(--mwhite);
+    font-size: 1vw;
+    font-family: var(--bs-font-sans-serif);
+    font-weight: normal;
+   
+}
+
+.h3-proj{
+    text-align: left;
+    color: var(--mwhite);
+    font-size: 1.5vw;
+    font-family: var(--bs-font-sans-serif);
+    font-weight: bold;
+    
+}
+
+
+/*-----------------------------------END OF PROJECTS PAGE--------------------------------------------------*/
+
+
+
+
+
+
 /* Footer with newsletter form and social media links */
 
 .footer {
@@ -289,6 +373,7 @@ nav h4 {
     padding-top: 0.7%;
     padding-bottom: 1%;
     line-height: 1.6;
+    font-family: var(--bs-font-sans-serif);
 }
 #h2-orient{
     padding-bottom: 0.5%;
@@ -296,7 +381,7 @@ nav h4 {
 
 /*slideshow*/
 * {box-sizing: border-box;}
-body {font-family: Verdana, sans-serif;}
+body {font-family: var(--bs-font-sans-serif)}
 .mySlides {display: none;}
 img {vertical-align: middle;}
 
