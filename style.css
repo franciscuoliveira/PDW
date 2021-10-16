@@ -87,7 +87,7 @@ nav {
 
 /*logo*/
 nav h4 {
-    max-width: 15vw;
+    max-width: 30vw;
     height: auto;
     color: var(--mwhite);
     font-size: 1.6em;
@@ -308,8 +308,7 @@ nav h4 {
 
 .footer-logo {
     color: var(--mblack);
-    text-align: center;
-    width: 180px;
+    padding-left: 45%;
     margin-bottom: 4vh;
     font-family: var(--logofont);
     font-weight: bolder;
@@ -378,6 +377,17 @@ nav h4 {
   color: grey;
 }
 
+/*Publications Page*/
+
+#h3-pubs{
+  padding-top: 2%;
+  padding-bottom: 0.5%;
+}
+ 
+.p-pubs{
+     padding-top: 0.7%;
+     padding-bottom: 2%;
+}
 
 /*Orientation page
 */
