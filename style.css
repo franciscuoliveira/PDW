@@ -196,7 +196,7 @@ nav h4 {
   
   /*end of flexbox index*/
 
-  .index-main{
+  main{
     padding-left: 12%; 
     padding-right: 10%; 
     color: var(--mwhite); 
@@ -213,43 +213,40 @@ nav h4 {
     flex-direction: row;
     font-size: 40px;
     text-align: center;
+    margin-top: 7%;
+   
   }
   
   .flex-item-left-proj { 
     padding: 10px;
     flex: 60%;
+   
   }
   
   .flex-item-right-proj {
     padding: 10px;
     flex: 60%;
+    
   }
   #projeto1{
     width: 50%;
+ 
   }
   #projeto2{
     width: 50%;
-  }
-  
-  
-  /* Responsive layout - makes a one column-layout instead of two-column layout */
-  @media (max-width: 800px) {
-    .flex-container-proj {
-        display: block;
-        flex-direction: column;
-    }
-    #projeto1{
-        width: 80%;
-      }
-    #projeto2{
-        width: 80%;
-      }
+ 
   }
 
+  .projeto:hover{
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.1);
+  }
+  
 .h2-proj{
     text-align: left;
     color: var(--mgold);
-    font-size: 2vw;
+    font-size: 1.5vw;
     font-family: var(--bs-font-sans-serif);
     font-weight: bold;
 }
@@ -266,12 +263,27 @@ nav h4 {
 .h3-proj{
     text-align: left;
     color: var(--mwhite);
-    font-size: 1.5vw;
+    font-size: 1.2vw;
     font-family: var(--bs-font-sans-serif);
     font-weight: bold;
     
 }
 
+/* Responsive layout - makes a one column-layout instead of two-column layout */
+@media (max-width: 800px) {
+    .flex-container-proj {
+        display: block;
+        flex-direction: column;
+    }
+    #projeto1{
+        width: 80%;
+      }
+    #projeto2{
+        width: 80%;
+      }
+
+    
+  }
 
 /*-----------------------------------END OF PROJECTS PAGE--------------------------------------------------*/
 
@@ -285,7 +297,7 @@ nav h4 {
 .footer {
     background-color: var(--mgold);
     padding: 90px 0;
-    
+    align-content: center;
     position: relative;
     right: 0;
     left: 0;
