@@ -35,6 +35,15 @@ html, body {
 a:link{
     text-decoration: none;
 }
+a{
+  color: var(--mgold);
+}
+a:active{
+  color: var(--mwhite);
+}
+a:hover{
+  color: var(--mgreen);
+}
 nav {
     display: flex;
     /*justify-content: space-around;*/
@@ -183,7 +192,7 @@ nav h4 {
     width: 40%;
   }
   #perfil_left{
-    width: 40%;
+    width: 52.2%;
   }
   
   
